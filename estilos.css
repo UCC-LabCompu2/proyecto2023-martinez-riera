@@ -59,6 +59,7 @@ main {
   width: 1000px;
   height: 1000px;
   background-color: #080808;
+  border-radius: 10px;
 }
 
 footer {

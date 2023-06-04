@@ -20,6 +20,11 @@ header {
   font-size: 40px;
 }
 
+#antezana h1 {
+  font-size: 40px;
+  margin: 0;
+}
+
 .stock {
   border: 2px solid rgb(252, 248, 248);
   padding: 10px;

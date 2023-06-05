@@ -1,101 +1,101 @@
 body {
-  font-family: Arial, sans-serif;
-  margin: auto;
-  background-color: #ffffff;
-  background-image: url(https://p4.wallpaperbetter.com/wallpaper/380/523/681/design-neon-abstract-light-design-hd-wallpaper-preview.jpg);
-  background-size: cover;
-  padding: 1%;
+    font-family: Arial, sans-serif;
+    margin: auto;
+    background-color: #ffffff;
+    background-image: url(https://p4.wallpaperbetter.com/wallpaper/380/523/681/design-neon-abstract-light-design-hd-wallpaper-preview.jpg);
+    background-size: cover;
+    padding: 1%;
 }
 
 
 header {
-  background-color: rgb(0, 0, 0);
-  color: #f4efef;
-  padding: 10px;
+    background-color: rgb(0, 0, 0);
+    color: #f4efef;
+    padding: 10px;
 }
 
 #antezana {
 
-  text-align: center;
-  color: #fff;
-  font-size: 40px;
+    text-align: center;
+    color: #fff;
+    font-size: 40px;
 }
 
 .navigation {
-  width: 50px;
-  height: 50px;
-  display: flex;
+    width: 50px;
+    height: 50px;
+    display: flex;
 
 }
 
 .container {
-  border: 2px solid #f8f7f7;
-  background-color: #000000;
-  border-radius: 5px;
-  color: #f4ebeb;
-  padding: 5px;
-  margin: 5px;
-  width: 90%px;
-  height: 90%px;
-  text-align: center;
+    border: 2px solid #f8f7f7;
+    background-color: #000000;
+    border-radius: 5px;
+    color: #f4ebeb;
+    padding: 5px;
+    margin: 5px;
+    width: 90%;
+    height: 90%;
+    text-align: center;
 }
 
+
 nav ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  text-align: right;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: right;
 }
 
 nav li {
-  display: inline-block;
-  margin-right: 20px;
+    display: inline-block;
+    margin-right: 20px;
 }
 
 main {
-  max-width: 1000px;
-  margin: auto;
-  padding: 50px;
-  opacity: 1;
-  border: 2px solid black;
-  width: 1000px;
-  height: 1000px;
-  background-color: #080808;
+    max-width: 1000px;
+    margin: auto;
+    padding: 50px;
+    opacity: 1;
+    border: 2px solid black;
+    width: 1000px;
+    height: 1000px;
+    background-color: #080808;
 }
 
 footer {
-  display: flex;
-  grid-template-columns: repeat(2, 3fr);
-  background-color: #000000;
-  padding: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 50%;
-  width: 100%;
+    display: flex;
+    grid-template-columns: repeat(2, 3fr);
+    background-color: #000000;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+    height: 50%;
+    width: 100%;
 }
 
 .footer-left {
-  text-align: left;
-  padding-top: 18%;
-  color: #ffffff;
+    text-align: left;
+    padding-top: 18%;
+    color: #ffffff;
 }
 
 .footer-right {
 
-  text-align: right;
-  padding: 10px;
-  margin-right: 20px;
-  color: #ffffff;
-  height: 100%;
+    text-align: right;
+    padding: 10px;
+    margin-right: 20px;
+    color: #ffffff;
+    height: 100%;
 }
 
 .fotos {
 
-  color: #ffffff;
-  padding: 10px;
-  width: 60px;
-  height: 50px;
-  margin-right: 20px;
+    color: #ffffff;
+    padding: 10px;
+    width: 60px;
+    height: 50px;
+    margin-right: 20px;
 
 }

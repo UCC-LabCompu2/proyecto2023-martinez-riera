@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: auto;
     background-color: #ffffff;
-    background-image: url(https://p4.wallpaperbetter.com/wallpaper/380/523/681/design-neon-abstract-light-design-hd-wallpaper-preview.jpg);
+    background-image: url(Fotos/fondo.jpg);
     background-size: cover;
     padding: 1%;
 }
@@ -35,8 +35,8 @@ header {
     color: #f4ebeb;
     padding: 5px;
     margin: 5px;
-    width: 90%;
-    height: 90%;
+    width: 98%;
+    height: 35%;
     text-align: center;
 }
 

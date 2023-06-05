@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     margin: auto;
-    background-image: url(https://p4.wallpaperbetter.com/wallpaper/380/523/681/design-neon-abstract-light-design-hd-wallpaper-preview.jpg);
+    background-image: url(Fotos/fondo.jpg);
     background-size: cover;
     padding: 1%;
 }
@@ -13,24 +13,21 @@ header {
     padding: 10px;
 
 }
+
 .stock {
     border: 2px solid rgb(252, 248, 248);
     width: 250px;
     height: 200px;
     margin: 2.7%;
-    background-image: url(https://images7.alphacoders.com/107/thumbbig-1075059.webp);
+    background-image: url(Fotos/csgo_fondo.png);
     background-size: cover;
     padding: 1%;
     border-radius: 5px;
 }
+
 .stock:hover {
     background-color: #0f0f0f;
-    background-image: url(https://img.freepik.com/fotos-premium/fondo-negro-abstracto-textura-primer-plano-color-negro_41969-11523.jpg);
-    transition: opacity 0.3s ease;
-    opacity: 1;
-}
-.hidden {
-    display: none;
+    transition: opacity 0.2s ease;
     opacity: 0;
 }
 
@@ -45,7 +42,6 @@ header {
     font-size: 40px;
     margin: 0;
 }
-
 
 
 .navigation {
@@ -89,10 +85,9 @@ footer {
     width: 100%;
 }
 
-hidden {
-    /*background-color: #020202;
+.hidden {
+    background-color: #020202;
     background-size: cover;
-    background-image: image("Fotos\black.png");*/
     display: none;
     opacity: 0;
 

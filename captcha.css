@@ -1,0 +1,42 @@
+body {
+    background-image: url(Fotos/fondo_perfil.jpg);
+    background-size: cover;
+}
+.captcha {
+    position : absolute;
+    height : 200px;
+    width : 200px;
+    background-color: gray;
+    left: 50%;
+    top : 50%;
+    transform : translate(-50%,-50%);
+    padding: 20px 10px;
+    box-shadow: 2px 2px 20px black;
+
+}
+
+
+.    captcha    #input_val{
+    height : 32px;
+    width   : 140px;
+    font-size: 22px;
+    font-weight : bold;
+
+}
+.   captcha      #btn{
+    height : 40px;
+    width : 120px;
+    color : white;
+    font-size: 20px;
+    background-color: blue;
+    cursor : pointer;
+    border: 1px solid white
+}
+
+. captcha  #operation{
+    font-size: 22px;
+    font-weight: bold;
+    color: white
+
+
+}

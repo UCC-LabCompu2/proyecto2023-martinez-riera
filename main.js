@@ -21,39 +21,51 @@ num2.textContent = Math.floor(Math.random() * 10).toString();
 let numero1 = parseInt(num1.innerText, 10);
 let numero2 = parseInt(num2.innerText, 10);
 
-const captcha = () => { //En esta funcion flecha, lo que hacemos es que a sum_resultado
+
+/*
+    Lo que hace la siguiente funcion es si el resultado de la suma que hace el usuario es igual al numero generado aleatoriamente por el captcha, entonces el usuario es redirigido
+    a la pagina principal. Y si es incorrecto, se genera una alert notificandolo al user y genera otro captcha.
+ */
+const captcha = () => {
     let sum_resultado = numero1 + numero2;
     let res = parseInt(input_val.value, 10);
     if (res === sum_resultado) {
-        alert("¡Correcto!");
+        alert("¡Correcto!, Ahora puedes registrarte");
         window.location.href = "perfil.html";
     } else {
-        alert("¡Incorrecto!");
+        alert("¡Incorrecto!, Intentalo de nuevo!!");
         window.location.href = "captcha.html";
     }
 }
 
 boton.addEventListener("click", captcha);
 
+
+/*
+Esta funcion lo que hace es leer el numero que el usuario ingreso y dibujarlo a un costado
+@method dibujarnumero
+* @param {number} numero - en esta variable se guarda el valor dado por num desde el html.
+* @return no retorna nada , ya q lo q hace una vez lee el numero es dibujarlo en el html.
+*/
 const num = document.getElementById('valor');
 const boton_dibujar = document.getElementById('boton_dibujar');
 const canvas = document.getElementById('_canvas');
 const ctx = canvas.getContext('2d');
 
 boton_dibujar.addEventListener('click', () => {
-    const number = parseInt(num.value, 10);
-    drawNumber(number);
+    const numero = parseInt(num.value, 10);
+    dibujarnumero(numero);
 });
 
-function drawNumber(number) {
+function dibujarnumero(numero) {
     ctx.clearRect(0, 0, canvas.width, canvas.height); // Limpiar el lienzo
 
-    // Configurar propiedades de dibujo
+    // Configuracion
     ctx.fillStyle = 'black';
     ctx.font = '48px Arial';
     ctx.textBaseline = 'middle';
     ctx.textAlign = 'center';
 
-    // Dibujar el número en el centro del lienzo
-    ctx.fillText(number.toString(), canvas.width / 2, canvas.height / 2);
+    // Dibujar el número
+    ctx.fillText(numero.toString(), canvas.width / 2, canvas.height / 2);
 }

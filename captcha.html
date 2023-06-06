@@ -14,10 +14,12 @@
 <body>
 <main>
     <div class="captcha">
-        <h3>Hola, demuestra q no eres un bot resolviendo la siguiente suma </h3>
-        <input type="text" id="input_val">
+        <h3>Hola, demuestra que no eres un bot resolviendo la siguiente suma </h3>
+        <input type="text" id="valor" />
         <p id="operacion"><span id="num1">1</span> + <span id="num2">2</span></p>
-        <button id="btn">Enviar respuesta</button>
+        <button id="boton">Enviar respuesta</button>
+        <button id="boton_dibujar">Dibujar</button>
+        <canvas id="_canvas" width="400" height="200"></canvas>
     </div>
 </main>
 <script src="main.js"></script>

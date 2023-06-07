@@ -1,4 +1,3 @@
-
 /*
 Esta funcion basicamente genera dos numeros aleatorios q luego seran sumados para posteriormente pedirle
 al usuario que ingrese el valor de esa suma y asi verificar q no es un bot.
@@ -25,6 +24,7 @@ let numero2 = parseInt(num2.innerText, 10);
 /*
     Lo que hace la siguiente funcion es si el resultado de la suma que hace el usuario es igual al numero generado aleatoriamente por el captcha, entonces el usuario es redirigido
     a la pagina principal. Y si es incorrecto, se genera una alert notificandolo al user y genera otro captcha.
+
  */
 const captcha = () => {
     let sum_resultado = numero1 + numero2;

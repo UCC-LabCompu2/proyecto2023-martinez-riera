@@ -11,6 +11,7 @@ function validarContrasenias(event) {
     }
     else{
         alert("Serás redireccionado a la página principal")
+        window.location.href = "index.html";
     }
 }
 document.getElementById("formulario").addEventListener("submit", validarContrasenias);

@@ -22,6 +22,11 @@ h1 {
     margin-bottom: 20px;
 }
 
+.button-back {
+    width: 50px;
+    height: 50px;
+}
+
 form label {
     display: block;
     margin-bottom: 5px;

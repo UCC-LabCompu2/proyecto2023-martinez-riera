@@ -1,71 +1,67 @@
-/*
-Esta funcion basicamente genera dos numeros aleatorios q luego seran sumados para posteriormente pedirle
-al usuario que ingrese el valor de esa suma y asi verificar q no es un bot.
-@method captcha
-* @param {number} num1 - numero aleatorio genera q se pedira sumar
-* @param {number} num2 - numero aleatorio genera q se pedira sumar
-* @param {number} sum_resultado - es el resultado de la suma de num1 y num2
-* @param {number} numero1 - almacena los valores enteros de num1
-* @param {number} numero2 - almacena los valores enteros de num2
-* @return {number} -el numero q se retorna en la funcion para verificar si es correcto o no es la suma de los numeros, (sum_resultado)
-*/
-let input_val = document.getElementById('valor');
+const boton = document.getElementById('boton');
 let num1 = document.getElementById('num1');
 let num2 = document.getElementById('num2');
-
-const boton = document.getElementById('boton');
-
 num1.textContent = Math.floor(Math.random() * 10).toString();
 num2.textContent = Math.floor(Math.random() * 10).toString();
-let numero1 = parseInt(num1.innerText, 10);
-let numero2 = parseInt(num2.innerText, 10);
-
-
-/*
-    Lo que hace la siguiente funcion es si el resultado de la suma que hace el usuario es igual al numero generado aleatoriamente por el captcha, entonces el usuario es redirigido
-    a la pagina principal. Y si es incorrecto, se genera una alert notificandolo al user y genera otro captcha.
-
+/**
+ * Esta función compara a "res" (valor de la suma que introduce el usuario) con "sum_resultado" (suma de los dos números generados aleatoriamente). Si el valor que introduce el usuario es correcto, saldrá una alerta indicando esto y se redireccionará a la página de logeo. En caso de que no, saldrá una alerta indicando y se re-cargará la página con una nueva suma.
+ * @method captcha
  */
 const captcha = () => {
+    let input_val = document.getElementById('valor');
+    let numero1 = parseInt(num1.innerText, 10);
+    let numero2 = parseInt(num2.innerText, 10);
     let sum_resultado = numero1 + numero2;
     let res = parseInt(input_val.value, 10);
     if (res === sum_resultado) {
-        alert("¡Correcto!, Ahora puedes registrarte");
+        alert("¡Correcto!, ahora puedes registrarte");
         window.location.href = "perfil.html";
     } else {
-        alert("¡Incorrecto!, Intentalo de nuevo!!");
+        alert("¡Incorrecto!, inténtalo de nuevo");
         window.location.href = "captcha.html";
     }
 }
-
 boton.addEventListener("click", captcha);
 
-
-/*
-Esta funcion lo que hace es leer el numero que el usuario ingreso y dibujarlo a un costado
-@method dibujarnumero
-* @param {number} numero - en esta variable se guarda el valor dado por num desde el html.
-* @return no retorna nada , ya q lo q hace una vez lee el numero es dibujarlo en el html.
-*/
 const num = document.getElementById('valor');
 const boton_dibujar = document.getElementById('boton_dibujar');
 const canvas = document.getElementById('_canvas');
 const ctx = canvas.getContext('2d');
+let color = 0;
 
-boton_dibujar.addEventListener('click', () => {
+/**
+ * Esta función llama a la función dibujar para que dibuje el número ingresado por el usuario, para posteriormente llamar a la función cambiarColor y cada 0.5 segundos cambiar el color.
+ * @method dibujarYcambiarColor
+ */
+const dibujarYcambiarColor = ()=>{
     const numero = parseInt(num.value, 10);
-    dibujarnumero(numero);
-});
+    dibujarNumero(numero);
+    setInterval(cambiarColor, 500); // Cambiar color cada 0.5 segundos
+}
+boton_dibujar.addEventListener('click', dibujarYcambiarColor)
 
-function dibujarnumero(numero) {
-    ctx.clearRect(0, 0, canvas.width, canvas.height); // Limpiar el lienzo
-
-    // Configuracion
+/**
+ * Primero borra cualquier contenido previamente dibujado en el canvas, para posteriormente dibujar el numero que introduce el usuario.
+ * @method dibujarNumero
+ * @param {number} numero - almacena el valor que introduce el usuario al completar la suma
+ */
+function dibujarNumero(numero) {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    // Configuración
     ctx.fillStyle = 'black';
     ctx.font = '48px Arial';
     ctx.textBaseline = 'middle';
     ctx.textAlign = 'center';
-
     // Dibujar el número
     ctx.fillText(numero.toString(), canvas.width / 2, canvas.height / 2);
 }
+/**
+ * Cambia el color dinámicamente incrementado el valor de "color" y se calcula el residuo entre 360 para darle un valor de color en HSL.
+ * @method cambiarColor
+ */
+function cambiarColor() {
+    color += 20; // Incrementar el valor del color
+    ctx.fillStyle = `hsl(${color % 360}, 100%, 50%)`; // Cambiar color utilizando HSL
+    ctx.fillText(num.value, canvas.width / 2, canvas.height / 2);
+}
+

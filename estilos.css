@@ -52,7 +52,7 @@ header {
 }
 
 .left-item {
-    float: left; /* Colocar este elemento a la izquierda */
+    float: left;
 }
 
 nav ul {

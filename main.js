@@ -4,7 +4,9 @@ let num2 = document.getElementById('num2');
 num1.textContent = Math.floor(Math.random() * 10).toString();
 num2.textContent = Math.floor(Math.random() * 10).toString();
 /**
- * Esta función compara a "res" (valor de la suma que introduce el usuario) con "sum_resultado" (suma de los dos números generados aleatoriamente). Si el valor que introduce el usuario es correcto, saldrá una alerta indicando esto y se redireccionará a la página de logeo. En caso de que no, saldrá una alerta indicando y se re-cargará la página con una nueva suma.
+ * Esta función compara a "res" (valor de la suma que introduce el usuario) con "sum_resultado" (suma de los dos números generados aleatoriamente)
+ * Si el valor que introduce el usuario es correcto, saldrá una alerta indicando esto y se redireccionará a la página de logeo.
+ * En caso de que no, saldrá una alerta indicando y se re-cargará la página con una nueva suma.
  * @method captcha
  */
 const captcha = () => {
@@ -30,7 +32,8 @@ const ctx = canvas.getContext('2d');
 let color = 0;
 
 /**
- * Esta función llama a la función dibujar para que dibuje el número ingresado por el usuario, para posteriormente llamar a la función cambiarColor y cada 0.5 segundos cambiar el color.
+ * Esta función llama a la función dibujar para que dibuje el número ingresado por el usuario
+ * para posteriormente llamar a la función cambiarColor y cada 0.5 segundos cambiar el color.
  * @method dibujarYcambiarColor
  */
 const dibujarYcambiarColor = ()=>{

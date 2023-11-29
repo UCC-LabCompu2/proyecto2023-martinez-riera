@@ -31,16 +31,11 @@ header {
     opacity: 0;
 }
 
-
-#antezana {
-    text-align: center;
-    color: #ffffff;
-    font-size: 40px;
-}
-
 #antezana h1 {
     font-size: 40px;
     margin: 0;
+    text-align: center;
+    color: #ffffff;
 }
 
 

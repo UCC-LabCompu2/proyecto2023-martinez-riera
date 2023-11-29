@@ -18,11 +18,11 @@ header {
     float: left;
 }
 
-#antezana {
-
-    text-align: center;
-    color: #fff;
+#antezana h1 {
     font-size: 40px;
+    margin: 0;
+    text-align: center;
+    color: #ffffff;
 }
 
 .navigation {
